@@ -1,7 +1,7 @@
 function isOneToOne(s1, s2) {
-  // # base check
-  if (s1.length !== s2.length) return false;
+  // # base case
   if (!s1 || !s2) return true;
+  if (s1.length !== s2.length) return false;
 
   // # main code
   let map = new Map();
@@ -21,5 +21,4 @@ function isOneToOne(s1, s2) {
 }
 
 var args = process.argv.slice(2);
-/** TEST CASE */
 console.log(isOneToOne(args[0], args[1]));
